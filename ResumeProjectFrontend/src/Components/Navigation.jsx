@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navigation = () => {
   return (
-    <div>
+    <>
       <nav
           className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
           id="sideNav"
@@ -63,7 +63,7 @@ const Navigation = () => {
             </ul>
           </div>
         </nav>
-    </div>
+    </>
   )
 }
 
