@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Navigation from "./Components/Navigation";
 import PageContent from "./Components/PageContent";
