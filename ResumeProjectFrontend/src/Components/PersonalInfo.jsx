@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PersonalInfoContext } from '../Contexts/PersonalInfoContext';
 
 const PersonalInfo = () => {
+  const {personalInfos} = useContext(PersonalInfoContext);
   return (
     <>
       <h1 className="mb-0">
-                Clarence
-                <span className="text-primary">Taylor</span>
+                {personalInfos[0]?.firstName}
+                <span className="text-primary">{personalInfos[0]?.lastName}</span>
               </h1>
     </>
   )
