@@ -4,7 +4,7 @@ import Experience from './Experience'
 import Education from './Education'
 import Skills from './Skills'
 import Interests from './Interests'
-import Awards from './Awards'
+import Awards from './Certificate'
 
 const PageContent = () => {
   return (

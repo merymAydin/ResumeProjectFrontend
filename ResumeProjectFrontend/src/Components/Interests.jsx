@@ -1,25 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { InterestContext } from '../Contexts/InterestContext';
 
 const Interests = () => {
+  const {interests} = useContext(InterestContext);
   return (
     <>
       <section className="resume-section" id="interests">
             <div className="resume-section-content">
               <h2 className="mb-5">Interests</h2>
-              <p>
-                Apart from being a web developer, I enjoy most of my time being
-                outdoors. In the winter, I am an avid skier and novice ice
-                climber. During the warmer months here in Colorado, I enjoy
-                mountain biking, free climbing, and kayaking.
-              </p>
-              <p className="mb-0">
-                When forced indoors, I follow a number of sci-fi and fantasy
-                genre movies and television shows, I am an aspiring chef, and I
-                spend a large amount of my free time exploring the latest
-                technology advancements in the front-end web development world.
-              </p>
+              {
+                interests.map(interest => (
+                  <p key={interest.id} className="mb-0">
+                    {interest.description ? interest.description : "No description available"}
+                  </p>)
+                )
+              }
             </div>
-          </section>
+      </section>
     </>
   )
 }
