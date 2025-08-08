@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ContactContext } from "../Contexts/ContactContext";
 
 const Contact = () => {
+  const { contacts } = useContext(ContactContext);
+  const info = contacts[0];
   return (
     <div className="subheading mb-5">
-      3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
-      <a href="mailto:name@email.com">name@email.com</a>
+      {info?.address} · {info?.town} , {info?.city}· {info?.phone} ·
+      <a href={`mailto:${info?.email}`}>{info?.email}</a>
     </div>
   );
 };
