@@ -7,7 +7,7 @@ const SocialAccount = () => {
   return (
       <div className="social-icons">
         {
-        socialAccounts.map(account =>  <a className="social-icon" href={`${account?.webUrl}/${account?.username}`} key={account?.id} target='_blank'><i className={account?.icon} /></a>)
+        socialAccounts.map(account =>  <a className="social-icon" href={`${account?.webUrl}/${account?.userName}`} key={account?.id} target='_blank'><i className={account?.icon} /></a>)
         }
       </div>
   );
