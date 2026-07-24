@@ -6,7 +6,7 @@ const InterestContextProvider = ({children}) => {
     const [interests, setInterests] = useState([]);
     const getInterests = async() => {
         try {
-            const response = await fetch("https://resume-project-agsn.onrender.com");
+            const response = await fetch("https://resume-project-agsn.onrender.com/api/Interests");
             const data = await response.json();
             setInterests(data);
         } catch (error) {
