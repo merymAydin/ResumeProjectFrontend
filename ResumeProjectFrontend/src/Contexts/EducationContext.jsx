@@ -6,7 +6,7 @@ const EducationContextProvider = ({children}) => {
     const [educations, setEducations] = useState([]);
     const getEducations = async () => {
         try {
-            const response = await fetch("https://resume-project-agsn.onrender.com");
+            const response = await fetch("https://resume-project-agsn.onrender.com/api/Educations");
             const data = await response.json();
             setEducations(data);
         } catch (error) {
