@@ -8,7 +8,7 @@ const AboutContextProvider = ({children}) => {
     useEffect(()=> {
         const getAbouts = async() =>{
             try {
-                const response = await fetch("https://resume-project-agsn.onrender.com/api/About");
+                const response = await fetch("https://resume-project-agsn.onrender.com/api/Abouts");
                 const data = await response.json();
                 setAbouts(data);
             } catch (error) {
