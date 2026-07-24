@@ -8,7 +8,7 @@ const PersonalInfoContextProvider = ({children}) => {
     useEffect(() => {
         const getPersonalInfos = async() => {
             try {
-                const response = await fetch("https://resume-project-agsn.onrender.com");
+                const response = await fetch(""https://resume-project-agsn.onrender.com/api/PersonelInfos"");
                 const data = await response.json();
                 setPersonalInfos(data);
             } catch (error) {
