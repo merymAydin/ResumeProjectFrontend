@@ -8,7 +8,7 @@ const [certificates, setCertificates] = useState([]);
 
 const getCertificates = async() => {
     try {
-        const response = await fetch('https://localhost:7156/api/Certificates');
+        const response = await fetch('https://resume-project-agsn.onrender.com');
         const data = await response.json();
         setCertificates(data);
     } catch (error) {
