@@ -8,7 +8,7 @@ const SkillContextProvider = ({children}) => {
 
     const getProgramsAndTools = async() => {
         try {
-            const response = await fetch('https://localhost:7156/api/Skills/GetProgramLanguageAndTools');
+            const response = await fetch('https://resume-project-agsn.onrender.com');
             const data = await response.json();
             setProgramAndTools(data);
         } catch (error) {
