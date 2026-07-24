@@ -8,7 +8,7 @@ const ExperienceContextProvider = ({children}) => {
 
     const getExperiences = async() => {
         try {
-            const response = await fetch("https://resume-project-agsn.onrender.com");
+            const response = await fetch("https://resume-project-agsn.onrender.com/api/Experiences");
             const data = await response.json();
             setExperiences(data);
         } catch (error) {   
