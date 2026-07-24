@@ -8,7 +8,7 @@ const ContactContextProvider = ({children}) => {
     useEffect(() => {
         const getContacts = async() => {
             try {
-                const response = await fetch("https://localhost:7156/api/Contacts");
+                const response = await fetch("https://resume-project-agsn.onrender.com");
                 const data = await response.json();
                 setContacts(data);
             } catch (error) {
