@@ -7,7 +7,7 @@ const SocialAccountContextProvider = ({children}) => {
 
     const getSocialAccounts = async () => {
             try {
-                const response = await fetch("https://resume-project-agsn.onrender.com");
+                const response = await fetch("https://resume-project-agsn.onrender.com/api/SocialAccounts");
                 const data = await response.json();
                 setSocialAccounts(data);
             } catch (error) {   
